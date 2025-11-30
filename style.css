@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 #container {
@@ -511,7 +512,7 @@ nav a:hover {
 /* EVENTS  */
 #images {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -690,6 +691,7 @@ button:hover {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+  flex-wrap: wrap;
 }
 
 #gallery-imgs img {
@@ -1075,11 +1077,17 @@ button:hover {
   /* EVENTS */
   #images {
     flex-direction: column;
+    display: flex;
   }
 
   .img-container {
     width: 100%;
     margin: 10px 0;
+  }
+
+  .img-container:nth-child(2),
+  .img-container:nth-child(3) {
+    display: none;
   }
 
   .img-container img {
